@@ -1,0 +1,12 @@
+build*/
+*.wav
+!effects/*/tests/golden/*.wav
+.vscode/
+.idea/
+.DS_Store
+fx-live.ini
+recordings/
+*.ppm
+fx-live.log
+fx-live-crash.txt
+fx-live.running

@@ -1,0 +1,38 @@
+# A tour of OnceMore (N1-N4): every control and gesture once. Used by CTest at odd
+# sample rates and random block sizes; also handy to listen to:
+#   fx-run oncemore --signal sweep:100:2000:-12 --duration 10 --script effects/oncemore/tests/tour.yaml --out tour.wav
+initial:
+  knobs: [0.25, 0.15, 0.44, 0.14, 0.0, 1.0]
+  toggles: [up, up, up, down]
+events:
+  - { t: 1.0, knob: 1, to: 0.8, over: 1.5 }
+  - { t: 3.0, knob: 2, to: 0.7, over: 1.0 }
+  - { t: 4.0, param: flutter_am, to: 1.0 }
+  - { t: 4.5, stomp: 1, action: hold, for: 1.5 }
+  - { t: 6.5, param: performance_ms, to: 0.8 }
+  - { t: 6.6, stomp: 1, action: hold, for: 1.0 }
+  - { t: 8.0, knob: 6, to: 0.5 }
+  - { t: 8.2, param: dry_align, to: 1.0 }
+  - { t: 8.6, stomp: 1, action: tap }
+  - { t: 9.3, stomp: 1, action: tap }
+  - { t: 1.5, knob: 4, to: 1.0, over: 3.0 }
+  - { t: 2.0, knob: 3, to: 1.0, over: 1.0 }
+  - { t: 5.0, param: model_override, to: 0.9 }
+  - { t: 5.5, param: bias, to: 1.0 }
+  - { t: 6.0, param: model_override, to: 0.0 }
+  - { t: 3.5, param: digital_depth, to: 0.5 }
+  - { t: 4.0, param: digital_filter, to: 0 }
+  - { t: 4.2, param: hum_freq, to: 0 }
+  - { t: 4.4, param: hiss_level, to: 1.0 }
+  - { t: 6.2, param: interference_level, to: 1.0 }
+  - { t: 6.4, toggle: 2, set: down }
+  - { t: 7.0, param: level, to: 1.0 }
+  - { t: 7.5, param: digital_filter, to: 1 }
+  - { t: 0.3, knob: 5, to: 1.0, over: 2.0 }
+  - { t: 2.6, stomp: 2, action: tap }
+  - { t: 3.2, stomp: 2, action: hold, for: 1.2 }
+  - { t: 5.2, toggle: 4, set: down }
+  - { t: 5.3, stomp: 2, action: hold, for: 1.0 }
+  - { t: 7.2, param: snag_on, to: 0 }
+  - { t: 7.4, param: drop_on, to: 0 }
+  - { t: 7.6, param: crinkle_on, to: 0 }

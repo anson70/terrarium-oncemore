@@ -1,0 +1,11 @@
+# One of each footswitch gesture on stomp 1, then a knob turn.
+# Expected gesture log (see test_passthrough.cpp):
+#   0.25 tap · 0.65 tap · 0.80 double_tap · 2.00 hold · 2.50 release
+initial:
+  knobs: [1.0, 0.5, 0.5, 0.5, 0.5, 0.5]
+events:
+  - { t: 0.20, stomp: 1, action: tap }               # tap
+  - { t: 0.60, stomp: 1, action: tap }               # tap ...
+  - { t: 0.75, stomp: 1, action: tap }               # ... then double tap
+  - { t: 1.50, stomp: 1, action: hold, for: 1.0 }    # hold at 2.0, release at 2.5
+  - { t: 2.60, knob: 1, to: 0.5, over: 0.2 }         # volume down to half

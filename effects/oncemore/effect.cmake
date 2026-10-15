@@ -1,0 +1,8 @@
+set(FX_CLASS     tfx::fx::OnceMore)
+set(FX_HEADER    oncemore/oncemore.h)
+set(FX_SOURCES   oncemore.cpp tape.cpp noise.cpp failure.cpp)
+set(FX_TESTS     tests/test_oncemore.cpp)
+set(FX_TOUR_ARGS --signal sweep:100:2000:-6 --duration 10 --seed 5)
+# For the public release (publish/package.cmake)
+set(FX_TITLE     OnceMore)
+set(FX_SUMMARY   "Tape degradation for the PedalPCB Terrarium: from a warm, wobbly cassette to a broken toy recorder.")
